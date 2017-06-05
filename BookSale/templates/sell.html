@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block title %}
+{% endblock %}
+
+{% block script %}
+    <script>
+    $(document).ready(function(){
+        $("#hello").click(function(){
+            alert("you clicked the button");
+        });
+    });
+    </script>
+{% endblock %}
+{% block body %}
+    <div class="jumbotron">
+     <h1>This is the sell page</h1>
+      
+    </div>
+     
+    <button id="hello" >Left</button>
+
+
+{% endblock %}
