@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script  src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" >
+<title>navbar tag</title>
+<script>
+$(document).ready(function(){
+    $.ajax({
+            url: '/home',
+            type: 'GET',
+            success: function(response) {
+                alert("successfull in loading page "+response);
+                $("#putnavdata").html(response);
+            },
+            error: function(error) {
+                console.log(error);
+            }
+        });
+
+$('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+  var tar =  $(e.target).attr("href")  // newly activated tab
+  e.relatedTarget // previous active tab
+  if(tar === "#buy"){
+      alert('you clicked the profile page');
+     $.ajax({
+            url: '/Buy',
+            type: 'GET',
+            success: function(response) {
+                alert("successfull in loading page "+response);
+                $("#putnavdata").html(response);
+            },
+            error: function(error) {
+                console.log(error);
+            }
+        });
+  }
+  else if(tar == "#home"){
+     $.ajax({
+            url: '/home',
+            type: 'GET',
+            success: function(response) {
+                alert("successfull in loading page "+response);
+                $("#putnavdata").html(response);
+            },
+            error: function(error) {
+                console.log(error);
+            }
+        });
+  }
+  else if(tar == "#sell"){
+     $.ajax({
+            url: '/Sell',
+            type: 'GET',
+            success: function(response) {
+                alert("successfull in loading page "+response);
+                $("#putnavdata").html(response);
+            },
+            error: function(error) {
+                console.log(error);
+            }
+        });
+  }
+  else if(tar == "#recentpurchases"){
+     $.ajax({
+            url: '/recent_purchases',
+            type: 'GET',
+            success: function(response) {
+                alert("successfull in loading page "+response);
+                $("#putnavdata").html(response);
+            },
+            error: function(error) {
+                console.log(error);
+            }
+        });
+  }
+
+});
+});
+</script>
+</head>
+<body>
+  
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+          
+          <a class="navbar-brand" href="{{url_for('homesellstuff')}}">ShareStuff</a>
+          </div>
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav" role="tablist">
+               <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
+               <li role="presentation"><a href="#buy" aria-controls="profile" role="tab" data-toggle="tab">Buy</a></li>
+               <li role="presentation"><a href="#sell" aria-controls="messages" role="tab" data-toggle="tab">Sell</a></li>
+               <li role="presentation"><a href="#recentpurchases" aria-controls="settings" role="tab" data-toggle="tab">RecentPurchases</a></li>
+            </ul>
+          </div>
+      </div>
+    </div>
+  </nav>
+
+  <div id="putnavdata"></div>
+</body>
+</html>
