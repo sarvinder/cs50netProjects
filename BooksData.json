@@ -1,0 +1,56 @@
+[
+  {
+    "NameOfBook": "Harry Potter and the Sorcerer's Stone", 
+    "By": "Harry,Potter",
+    "price":"20"
+  }, 
+  {
+    
+    "NameOfBook": "harry potter and chamber of secrets", 
+    "By": "Harry,Potter",
+    "price":"30"
+  }, 
+  {
+   
+    "NameOfBook": "harry potter and prisoner of azkaban ", 
+    "By": "Harry,Potter",
+    "price":"40"
+  }, 
+  {
+   
+    "NameOfBook": "harry potter and goblet of fire", 
+    "By": "Harry,Potter",
+    "price":"50"
+  }, 
+  {
+   
+    "NameOfBook": "harry potter and order of phoenix", 
+    "By": "Harry,Potter",
+    "price":"60"
+  },  
+  {
+   
+    "NameOfBook": "harry potter and half blood prince", 
+    "By": "Harry,Potter",
+    "price":"60"
+  },
+    {
+   
+    "NameOfBook": "harry potter and deathly hallows part 1", 
+    "By": "Harry,Potter",
+    "price":"70"
+  }, 
+    {
+   
+    "NameOfBook": "harry potter and deathly hallows part 2", 
+    "By": "Harry,Potter",
+    "price":"80"
+  }, 
+    {
+   
+    "NameOfBook": "Android Development", 
+    "By": "Udacity",
+    "price":"90"
+  }, 
+
+]
